@@ -72,7 +72,7 @@ border-radius: 0px;
 (click: ?loada)[
 
 (if: (saved-games:) contains &quot;Slot A&quot;)[
-	(set: $loadconf to (confirm: &quot;确定要读取 &quot; +$name+ &quot; 在 &quot;+$day+&quot;，&quot;+$hour+&quot; 于 &quot;+$place+&quot; 处保存的存档吗？&quot;))
+	(set: $loadconf to (confirm: &quot;确定要读取在 &quot;+$day+&quot;，&quot;+$hour+&quot; 于 &quot;+$place+&quot; 处保存的存档吗？&quot;))
 	$loadconf[(load-game:&quot;Slot A&quot;)(alert:&quot;读取成功&quot;)]
 	]
 (alert:&quot;读取失败。存档为空。&quot;)
@@ -628,7 +628,7 @@ border-radius: 0px;
 ---
 [[继续-&gt;2-5]]
 ]
-</tw-passagedata><tw-passagedata pid="16" name="2-5" tags="" position="250,525" size="100,100">
+</tw-passagedata><tw-passagedata pid="16" name="2-5" tags="" position="250,545" size="100,100">
 你手机没拿。
 或者说，并不是主观上你不想带走手机，而是那部手机修好以后，也一直留在东方仗助的手上。搞不好是有意为之。但这么恶意地揣测谁的用意也许不太好。
  
@@ -778,7 +778,7 @@ border-radius: 0px;
 
 ---
 [[TBC-&gt;Ending Page]]]
-</tw-passagedata><tw-passagedata pid="20" name="Ending Page" tags="" position="374,600" size="100,100">
+</tw-passagedata><tw-passagedata pid="20" name="Ending Page" tags="" position="374,601" size="100,100">
 感谢您的游玩。
 本游戏目前就到这里啦。之后还会随着小说本体更新而追加新的内容，敬请期待。
 
