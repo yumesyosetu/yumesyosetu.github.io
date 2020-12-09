@@ -48,15 +48,15 @@ background-color: rgb(0,0,0,0);
 border: 1px solid #000;
 border-radius: 0px;
 }
-</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Startup" color="green"></tw-tag>,<tw-tag name="footer" color="blue"></tw-tag><tw-passagedata pid="1" name="Introduction" tags="Startup" position="0,0" size="100,100"> 
+</style><script role="script" id="twine-user-script" type="text/twine-javascript"></script><tw-tag name="Startup" color="green"></tw-tag>,<tw-tag name="footer" color="blue"></tw-tag><tw-passagedata pid="1" name="Introduction" tags="Startup" position="1,0" size="100,100"> 
 **《梦小说成了现实这件事》**是一款以《JOJO的奇妙冒险》为原作的**乙女向**同人文字冒险游戏。
 可能含有一定恐怖、怪诞内容，以及角色崩坏，只建议什么都能接受的人游玩。
 
-如果您已阅读并理解以上内容，点击[[开始游戏-&gt;0-1]]。</tw-passagedata><tw-passagedata pid="2" name="存&amp;读档" tags="footer" position="124,0" size="100,100">{(set: $saveconf to false)
+如果您已阅读并理解以上内容，点击[[开始游戏-&gt;0-1]]。</tw-passagedata><tw-passagedata pid="2" name="存&amp;读档" tags="footer" position="123,1" size="100,100">{(set: $saveconf to false)
 (set: $loadconf to false)
 &lt;span id=&quot;box&quot;&gt;(align:&quot;=&gt;&lt;=&quot;)[
-[存档]&lt;savea|
-(click: ?savea)[
+
+(link-repeat: &quot;存档&quot;)[
 	(set: $day to (current-date:))
 	(set: $hour to (current-time:))
 	(set: $place to (passage:)&#39;s name)
@@ -66,21 +66,14 @@ border-radius: 0px;
 	]
 ]
 
-
-
-[读档]&lt;loada|
-(click: ?loada)[
-
+(link-repeat: &quot;读档&quot;)[
 (if: (saved-games:) contains &quot;Slot A&quot;)[
 	(set: $loadconf to (confirm: &quot;确定要读取在 &quot;+$day+&quot;，&quot;+$hour+&quot; 于 &quot;+$place+&quot; 处保存的存档吗？&quot;))
 	$loadconf[(load-game:&quot;Slot A&quot;)(alert:&quot;读取成功！&quot;)]
 	]
 (alert:&quot;读取失败。&quot;)
 ]
-
-]
-
-&lt;/span&gt;
+]&lt;/span&gt;
 }
 
 </tw-passagedata><tw-passagedata pid="3" name="0-1" tags="" position="0,125" size="100,100">###序章
@@ -290,7 +283,7 @@ border-radius: 0px;
  
 ---
 ####[[序章「梦小说成了现实这件事」 完-&gt;1-1]]
-</tw-passagedata><tw-passagedata pid="8" name="1-1" tags="" position="125,125" size="100,100">###第一章
+</tw-passagedata><tw-passagedata pid="8" name="1-1" tags="" position="125,105" size="100,100">###第一章
  
 因为是英日混血，完全没有迟到的打算，甚至比你还早到了十分钟的乔鲁诺是意大利人之鉴。
  
