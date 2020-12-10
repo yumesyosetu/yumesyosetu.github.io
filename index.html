@@ -54,7 +54,7 @@ border-radius: 0px;
 
 如果您已阅读并理解以上内容，点击[[开始游戏-&gt;0-1]]。
 
-目前更新进度为 [[Lofter 第八话（2020-12-10）-&gt;3-4]]。</tw-passagedata><tw-passagedata pid="2" name="存&amp;读档" tags="footer" position="100,0" size="100,100">{(set: $saveconf to false)
+目前更新进度为 [[Lofter 第八话（2020-12-10）-&gt;3-4]]。</tw-passagedata><tw-passagedata pid="2" name="存&amp;读档" tags="footer" position="120,0" size="100,100">{(set: $saveconf to false)
 (set: $loadconf to false)
 &lt;span id=&quot;box&quot;&gt;(align:&quot;=&gt;&lt;=&quot;)[
 
@@ -67,14 +67,16 @@ border-radius: 0px;
 		(if:(save-game:&quot;Slot A&quot;))[(alert:&quot;保存成功！&quot;)]
 	]
 ]
-
 (link-repeat: &quot;读档&quot;)[
-(if: (saved-games:) contains &quot;Slot A&quot;)[
-	(set: $loadconf to (confirm: &quot;确定要读取在 &quot;+$day+&quot;，&quot;+$hour+&quot; 于 &quot;+$place+&quot; 处保存的存档吗？&quot;))
-	$loadconf[(load-game:&quot;Slot A&quot;)(alert:&quot;读取成功！&quot;)]
-	]
-(alert:&quot;读取失败。&quot;)
+	(set: $loadconf to (confirm: &quot;确定要读取存档吗？&quot;))
+	(if: (saved-games:) contains &quot;Slot A&quot;)[
+		$loadconf[
+			(alert:&quot;读档成功！&quot;)
+			(loadgame: &quot;Slot A&quot;)]
+	](alert:&quot;读档失败。&quot;)
 ]
+
+
 ]&lt;/span&gt;
 }
 
